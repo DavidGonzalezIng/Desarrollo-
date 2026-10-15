@@ -1,0 +1,239 @@
+body {
+    background-color: #10251c;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Burbujas del fondo */
+.burbuja {
+    position: fixed;
+    background-color: #39ff88;
+    opacity: 0.12;
+    border-radius: 50%;
+    animation: flotar 6s infinite ease-in-out;
+}
+
+.b1 { width: 80px; height: 80px; top: 10%; left: 10%; }
+.b2 { width: 40px; height: 40px; top: 20%; right: 15%; }
+.b3 { width: 100px; height: 100px; bottom: 10%; left: 20%; }
+.b4 { width: 60px; height: 60px; bottom: 20%; right: 10%; }
+.b5 { width: 30px; height: 30px; top: 50%; left: 5%; }
+.b6 { width: 50px; height: 50px; top: 70%; right: 25%; }
+.b7 { width: 25px; height: 25px; top: 10%; right: 40%; }
+.b8 { width: 70px; height: 70px; bottom: 5%; right: 45%; }
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Tarjeta principal */
+.tarjeta {
+    background-color: #19372a;
+    border: 2px solid #39ff88;
+    border-radius: 20px;
+    padding: 35px 25px;
+    width: 340px;
+    max-width: calc(100% - 70px);
+    box-shadow: 0 0 25px #39ff8833;
+    position: relative;
+    z-index: 1;
+    margin: 25px auto;
+}
+
+.estrella {
+    color: #39ff88;
+    font-size: 35px;
+}
+
+h1 {
+    color: #39ff88;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.mensaje {
+    color: #c4e8d2;
+    font-size: 16px;
+}
+
+/* Gato detective */
+.animal {
+    position: relative;
+    width: 180px;
+    height: 190px;
+    margin: 25px auto;
+}
+
+.cara {
+    position: absolute;
+    background-color: #d1e5d8;
+    width: 110px;
+    height: 95px;
+    border-radius: 45%;
+    top: 40px;
+    left: 35px;
+    z-index: 2;
+}
+
+.oreja {
+    position: absolute;
+    width: 45px;
+    height: 55px;
+    background-color: #d1e5d8;
+    top: 12px;
+    z-index: 1;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.oreja.izquierda {
+    left: 37px;
+    transform: rotate(-15deg);
+}
+
+.oreja.derecha {
+    right: 37px;
+    transform: rotate(15deg);
+}
+
+.ojo {
+    position: absolute;
+    width: 11px;
+    height: 15px;
+    background-color: #10251c;
+    border-radius: 50%;
+    top: 37px;
+}
+
+.ojo1 {
+    left: 27px;
+}
+
+.ojo2 {
+    right: 27px;
+}
+
+.bigotes {
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background-color: #176b45;
+    top: 61px;
+}
+
+.bigotes1 {
+    left: -15px;
+    box-shadow: 0 -7px #176b45, 0 7px #176b45;
+}
+
+.bigotes2 {
+    right: -15px;
+    box-shadow: 0 -7px #176b45, 0 7px #176b45;
+}
+
+.nariz {
+    position: absolute;
+    background-color: #176b45;
+    width: 12px;
+    height: 9px;
+    border-radius: 50% 50% 60% 60%;
+    top: 57px;
+    left: 49px;
+}
+
+.boca {
+    position: absolute;
+    width: 16px;
+    height: 9px;
+    border-bottom: 2px solid #10251c;
+    border-radius: 50%;
+    top: 63px;
+    left: 47px;
+}
+
+.cuerpo {
+    position: absolute;
+    width: 78px;
+    height: 65px;
+    background-color: #d1e5d8;
+    border-radius: 45% 45% 30% 30%;
+    bottom: 10px;
+    left: 51px;
+}
+
+.pata {
+    position: absolute;
+    background-color: #d1e5d8;
+    width: 32px;
+    height: 22px;
+    bottom: 5px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.pata1 {
+    left: 48px;
+}
+
+.pata2 {
+    right: 48px;
+}
+
+.cola {
+    position: absolute;
+    width: 55px;
+    height: 18px;
+    border: 9px solid #d1e5d8;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    right: 5px;
+    bottom: 45px;
+    transform: rotate(-25deg);
+}
+
+/* Texto y botón */
+.submensaje {
+    color: #c4e8d2;
+    font-size: 15px;
+}
+
+button {
+    background-color: #176b45;
+    color: white;
+    border: 2px solid #39ff88;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #23965e;
+}
+
+#respuesta {
+    color: #39ff88;
+    font-weight: bold;
+    min-height: 20px;
+}
+
+footer {
+    color: #9bc9ad;
+    font-size: 12px;
+    margin-top: 25px;
+}

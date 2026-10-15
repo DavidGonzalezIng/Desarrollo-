@@ -1,0 +1,398 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+:root {
+    --bg: #0b0913;
+    --panel: #141020;
+    --panel-light: #1d1630;
+    --purple: #a78bfa;
+    --neon: #c4a1ff;
+    --text: #f4efff;
+    --muted: #a39ab8;
+    --border: #33244b;
+    --green: #75f0bb;
+    --red: #ff829c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at 50% 0%, #281444 0%, transparent 48%),
+        var(--bg);
+    color: var(--text);
+    font-family: 'Nunito', sans-serif;
+}
+
+button {
+    font: inherit;
+}
+
+.topbar {
+    min-height: 70px;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    background: #0b0913dd;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--purple);
+}
+
+.case-label, .eyebrow, .stat-label,
+.case-tag, .clue-heading, .question-label,
+.suspects h3, footer {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.case-label {
+    color: var(--muted);
+}
+
+.container {
+    width: min(680px, 90%);
+    margin: 0 auto;
+}
+
+.hero {
+    padding: 48px 0 26px;
+}
+
+.eyebrow {
+    color: var(--green);
+}
+
+h1 {
+    font-size: clamp(36px, 8vw, 58px);
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+    margin: 16px 0;
+}
+
+h1 span {
+    color: var(--purple);
+    text-shadow: 0 0 24px #9b68ff44;
+}
+
+.intro {
+    max-width: 480px;
+    line-height: 1.8;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 12px 0 18px;
+}
+
+.stat {
+    background: #151020;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.stat-label {
+    display: block;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.stat strong {
+    font-size: 21px;
+}
+
+.progress-track {
+    height: 5px;
+    background: #292035;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 22px;
+}
+
+#progressBar {
+    height: 100%;
+    width: 33.33%;
+    background: linear-gradient(90deg, #8052db, #d5b6ff);
+    transition: width 0.4s ease;
+}
+
+.game-card {
+    background: linear-gradient(145deg, #181226, #100d19);
+    border: 1px solid #493263;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 0 35px #6e3ab015;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.case-tag {
+    color: var(--purple);
+    background: #a78bfa15;
+    border: 1px solid #a78bfa35;
+    padding: 7px 10px;
+    border-radius: 7px;
+}
+
+.live-dot {
+    font-size: 10px;
+    color: var(--green);
+    letter-spacing: 1px;
+}
+
+.cat-avatar {
+    margin: 26px auto 12px;
+    width: 94px;
+    height: 94px;
+    display: grid;
+    place-items: center;
+    border-radius: 25px;
+    background: #9b70ff12;
+    border: 1px solid #9b70ff44;
+    font-size: 51px;
+    box-shadow: 0 0 30px #9b70ff12;
+}
+
+h2 {
+    text-align: center;
+    font-size: 25px;
+    margin: 12px 0;
+}
+
+.story {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 490px;
+    margin: 0 auto 22px;
+}
+
+.clue-box {
+    padding: 17px;
+    background: #0d0a15;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.clue-heading {
+    color: var(--purple);
+}
+
+#clueText {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 12px 0;
+}
+
+.hint-button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: var(--neon);
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.hint-button:hover {
+    color: white;
+}
+
+.hint-text {
+    color: #d3c4f0;
+    background: #9b70ff12;
+    border-left: 3px solid var(--purple);
+    padding: 10px 12px;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.question-label {
+    color: var(--muted);
+    margin: 24px 0 12px;
+}
+
+.answers {
+    display: grid;
+    gap: 10px;
+}
+
+.answer-button {
+    width: 100%;
+    padding: 14px;
+    text-align: left;
+    color: var(--text);
+    background: var(--panel-light);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.answer-button:hover:not(:disabled) {
+    border-color: var(--purple);
+    background: #302044;
+    transform: translateY(-1px);
+}
+
+.answer-button:disabled {
+    cursor: default;
+    opacity: 0.85;
+}
+
+.answer-button.correct {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.answer-button.wrong {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+.feedback {
+    font-size: 14px;
+    line-height: 1.7;
+    font-weight: 700;
+}
+
+.feedback.success {
+    color: var(--green);
+}
+
+.feedback.error {
+    color: var(--red);
+}
+
+.primary-button {
+    width: 100%;
+    padding: 14px;
+    border: 0;
+    border-radius: 10px;
+    color: #160e23;
+    font-weight: 900;
+    background: linear-gradient(100deg, #b99aff, #e0c8ff);
+    cursor: pointer;
+    box-shadow: 0 0 22px #a78bfa20;
+}
+
+.primary-button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.suspects {
+    margin: 28px 0;
+}
+
+.suspects h3 {
+    color: var(--muted);
+    margin-bottom: 14px;
+}
+
+.suspect-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.suspect {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px;
+    background: #151020;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.suspect > span {
+    font-size: 27px;
+}
+
+.suspect strong, .suspect small {
+    display: block;
+}
+
+.suspect strong {
+    font-size: 13px;
+}
+
+.suspect small {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+footer {
+    text-align: center;
+    color: #736984;
+    font-size: 9px;
+    padding: 10px 0 28px;
+}
+
+@media (max-width: 480px) {
+    .topbar {
+        padding: 16px 5%;
+    }
+
+    .logo {
+        font-size: 12px;
+    }
+
+    .case-label {
+        font-size: 9px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .hero {
+        padding-top: 34px;
+    }
+
+    .game-card {
+        padding: 17px;
+    }
+
+    .stat {
+        padding: 12px 9px;
+    }
+
+    .stat strong {
+        font-size: 17px;
+    }
+
+    .suspect {
+        padding: 10px;
+    }
+}

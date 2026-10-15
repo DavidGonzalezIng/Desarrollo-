@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detective Michi | Caso Misterioso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Burbujas del fondo -->
+    <div class="burbuja b1"></div>
+    <div class="burbuja b2"></div>
+    <div class="burbuja b3"></div>
+    <div class="burbuja b4"></div>
+    <div class="burbuja b5"></div>
+    <div class="burbuja b6"></div>
+    <div class="burbuja b7"></div>
+    <div class="burbuja b8"></div>
+
+    <!-- Tarjeta principal -->
+    <main class="tarjeta">
+
+        <div class="estrella">✦</div>
+
+        <h1>Detective Michi</h1>
+
+        <p class="mensaje">
+            Un misterio está esperando a ser resuelto.
+        </p>
+
+        <!-- Gato detective -->
+        <div class="animal">
+
+            <div class="cola"></div>
+
+            <div class="oreja izquierda"></div>
+            <div class="oreja derecha"></div>
+
+            <div class="cara">
+                <div class="ojo ojo1"></div>
+                <div class="ojo ojo2"></div>
+                <div class="bigotes bigotes1"></div>
+                <div class="bigotes bigotes2"></div>
+                <div class="nariz"></div>
+                <div class="boca"></div>
+            </div>
+
+            <div class="cuerpo"></div>
+            <div class="pata pata1"></div>
+            <div class="pata pata2"></div>
+
+        </div>
+
+        <p class="submensaje">
+            Caso #001: El misterio del atún perdido
+        </p>
+
+        <button onclick="saludar()">
+            Investigar caso
+        </button>
+
+        <p id="respuesta"></p>
+
+        <footer>Departamento de Investigación Felina</footer>
+
+    </main>
+
+    <script>
+        function saludar() {
+            document.getElementById("respuesta").textContent =
+                "¡Caso abierto! Busca las pistas, detective.";
+        }
+    </script>
+
+</body>
+</html>

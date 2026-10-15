@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detective Michi | Caso 001</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <a class="logo" href="#">🐈 DETECTIVE <span>MICHI</span></a>
+        <div class="case-label">ARCHIVO #001</div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="eyebrow">● CASO ABIERTO</div>
+            <h1>El misterio<br>del <span>atún perdido.</span></h1>
+            <p class="intro">
+                Alguien se llevó el último atún de la cocina.
+                Examina las pistas, analiza las declaraciones
+                y descubre quién es el culpable.
+            </p>
+        </section>
+
+        <section class="stats">
+            <div class="stat">
+                <span class="stat-label">NIVEL</span>
+                <strong id="levelNumber">01 / 03</strong>
+            </div>
+            <div class="stat">
+                <span class="stat-label">PUNTOS</span>
+                <strong id="score">000</strong>
+            </div>
+            <div class="stat">
+                <span class="stat-label">PISTAS</span>
+                <strong id="cluesCount">0</strong>
+            </div>
+        </section>
+
+        <div class="progress-track">
+            <div id="progressBar"></div>
+        </div>
+
+        <section class="game-card" id="gameCard">
+            <div class="card-top">
+                <span id="caseNumber" class="case-tag">CASO 01</span>
+                <span class="live-dot">INVESTIGANDO</span>
+            </div>
+
+            <div class="cat-avatar" id="catAvatar">🐈‍⬛</div>
+            <h2 id="levelTitle">La escena del crimen</h2>
+            <p id="story" class="story"></p>
+
+            <div class="clue-box">
+                <div class="clue-heading">◈ EVIDENCIA ENCONTRADA</div>
+                <p id="clueText">Analiza la evidencia para empezar.</p>
+                <button id="hintButton" class="hint-button">
+                    ✦ Revelar una pista
+                </button>
+                <p id="hintText" class="hint-text" hidden></p>
+            </div>
+
+            <h3 class="question-label">¿CUÁL ES TU DEDUCCIÓN?</h3>
+            <div id="answers" class="answers"></div>
+
+            <p id="feedback" class="feedback" aria-live="polite"></p>
+
+            <button id="nextButton" class="primary-button" hidden>
+                Siguiente nivel →
+            </button>
+        </section>
+
+        <section class="suspects">
+            <h3>ARCHIVO DE SOSPECHOSOS</h3>
+            <div class="suspect-list">
+                <div class="suspect">
+                    <span>🐈</span>
+                    <div><strong>Michi</strong><small>El gato curioso</small></div>
+                </div>
+                <div class="suspect">
+                    <span>🐈‍⬛</span>
+                    <div><strong>Sombra</strong><small>El sigiloso</small></div>
+                </div>
+                <div class="suspect">
+                    <span>🐱</span>
+                    <div><strong>Bigotes</strong><small>El glotón</small></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>DETECTIVE MICHI © 2026 · TODO CASO TIENE UNA PISTA</footer>
+    </main>
+</body>
+</html>
